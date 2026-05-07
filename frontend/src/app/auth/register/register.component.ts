@@ -12,7 +12,7 @@ import { AuthService } from '../../core/services/auth.service';
     <div class="auth-container">
       <div class="auth-card">
         <div class="auth-header">
-          <div class="logo">✦</div>
+          <img src="assets/logo.png" class="logo-img" alt="logo" />
           <h1>Create account</h1>
           <p>Start managing your tasks</p>
         </div>
@@ -70,6 +70,8 @@ import { AuthService } from '../../core/services/auth.service';
       border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem;
     }
     .auth-header { text-align: center; margin-bottom: 2rem; }
+    /* Login / Register */
+    .logo-img {width: 120px; height: auto; margin-bottom: 1rem;}
     .logo { font-size: 2.5rem; margin-bottom: 1rem; }
     .auth-header h1 { font-size: 1.75rem; font-weight: 700; color: var(--text); margin: 0 0 0.5rem; }
     .auth-header p { color: var(--text-muted); margin: 0; }

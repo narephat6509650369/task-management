@@ -14,8 +14,7 @@ import { Task, TaskStatus, CreateTaskDto } from '../../core/models/task.model';
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-header">
-          <span class="logo">✦</span>
-          <span class="logo-text">Taskflow</span>
+          <img src="assets/logo.png" class="sidebar-logo" alt="logo" />
         </div>
 
         <div class="user-card">
@@ -184,6 +183,9 @@ import { Task, TaskStatus, CreateTaskDto } from '../../core/models/task.model';
       display: flex; flex-direction: column; gap: 1.5rem;
     }
     .sidebar-header { display: flex; align-items: center; gap: 0.75rem; }
+
+    /* Sidebar */
+    .sidebar-logo { width: 200px; height: auto;}
     .logo { font-size: 1.5rem; }
     .logo-text { font-size: 1.125rem; font-weight: 700; color: var(--text); }
     .user-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: var(--bg); border-radius: 10px; }
