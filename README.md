@@ -24,7 +24,7 @@ A production-ready task management application built with **Next.js**, **Angular
 └─────────────────────────────────────────────┘
 ```
 
-## 🚀 Quick Start with Docker
+##  Quick Start with Docker
 
 ```bash
 # 1. Clone and enter project
@@ -43,7 +43,7 @@ docker-compose up --build
 # DB       → localhost:3306
 ```
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -93,7 +93,7 @@ task-management/
 └── .env.example
 ```
 
-## 📌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
@@ -124,7 +124,7 @@ npm install
 npm start                    # Starts on :4200 with proxy to :3000
 ```
 
-## 🔒 Auth Flow
+##  Auth Flow
 
 ```
 1. POST /api/auth/login  →  { user, token }
