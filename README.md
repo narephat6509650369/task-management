@@ -133,14 +133,4 @@ npm start                    # Starts on :4200 with proxy to :3000
 4. Backend withAuth() verifies JWT on every protected route
 5. User can only access their own tasks
 ```
-
-## 💼 Resume Bullets
-
-```
-• Built a full-stack task management app using Next.js API routes and Angular 17 with RESTful architecture.
-• Implemented JWT authentication with route guards and HTTP interceptors for secure API access.
-• Designed relational DB schema with Prisma ORM and implemented full CRUD for task management.
-• Containerized the full application (frontend, backend, database) using Docker Compose for consistent deployment.
-• Applied Zod input validation and proper HTTP error handling following production best practices.
-```
 # task-management
