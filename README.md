@@ -1,4 +1,4 @@
-# ✦ Taskflow — Full-Stack Task Management System
+# Taskflow — Full-Stack Task Management System
 
 A production-ready task management application built with **Next.js**, **Angular**, and **MySQL**, fully containerized with **Docker Compose**.
 
