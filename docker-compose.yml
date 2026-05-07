@@ -1,0 +1,50 @@
+version: '3.9'
+
+services:
+  # ── MySQL Database ─────────────────────────────────────────
+  db:
+    image: mysql:8.0
+    container_name: taskflow-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret1234}
+      MYSQL_DATABASE: ${DB_NAME:-taskdb}
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Next.js Backend ────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: taskflow-backend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: mysql://root:${DB_PASSWORD:-secret1234}@db:3306/${DB_NAME:-taskdb}
+      JWT_SECRET: ${JWT_SECRET:-change-this-in-production}
+      NODE_ENV: production
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ── Angular Frontend ───────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: taskflow-frontend
+    restart: always
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
