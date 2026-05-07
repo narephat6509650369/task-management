@@ -97,8 +97,8 @@ task-management/
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/api/auth/register` | ❌ | Create account |
-| POST | `/api/auth/login` | ❌ | Sign in, get JWT |
+| POST | `/api/auth/register` | ✅ | Create account |
+| POST | `/api/auth/login` | ✅ | Sign in, get JWT |
 | GET | `/api/tasks` | ✅ | Get my tasks |
 | POST | `/api/tasks` | ✅ | Create task |
 | PUT | `/api/tasks/:id` | ✅ | Update task |
